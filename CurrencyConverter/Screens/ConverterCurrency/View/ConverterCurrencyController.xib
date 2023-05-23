@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConverterCurrencyController" customModule="CurrencyConverter" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomConstraintRefresh" destination="RIm-ql-lDm" id="n65-yI-Qku"/>
+                <outlet property="fromCurrencyButton" destination="jdH-SY-UKY" id="lD3-4w-ttN"/>
+                <outlet property="fromValue" destination="R88-8s-lt8" id="oFM-IJ-5js"/>
+                <outlet property="leftBorderView" destination="4JB-sR-9z1" id="9a0-Nd-olE"/>
+                <outlet property="toCurrencyButton" destination="5bF-Tw-EWi" id="MwS-DH-ysA"/>
+                <outlet property="toValue" destination="fmv-Bg-Sxn" id="wgF-Np-Vzc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdH-SY-UKY" userLabel="fromCurrency" customClass="SelectCurrency" customModule="CurrencyConverter" customModuleProvider="target">
+                    <rect key="frame" x="24" y="124" width="159" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="znR-AC-IH7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Currency" image="arrowDown">
+                        <color key="titleColor" red="0.74901960784313726" green="0.74901960784313726" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <buttonConfiguration key="configuration" style="plain" image="arrowDown" title="Currency">
+                        <fontDescription key="titleFontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
+                        <color key="baseForegroundColor" red="0.74901960784313726" green="0.74901960784313726" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="fromSelectCurrecy:" destination="-1" eventType="touchUpInside" id="tTA-nE-w3o"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bF-Tw-EWi" userLabel="toCurrency" customClass="SelectCurrency" customModule="CurrencyConverter" customModuleProvider="target">
+                    <rect key="frame" x="231" y="124" width="159" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="kUa-k3-lKE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Currency" image="arrowDown">
+                        <color key="titleColor" red="0.74901960784313726" green="0.74901960784313726" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <buttonConfiguration key="configuration" style="plain" image="arrowDown" title="Currency">
+                        <fontDescription key="titleFontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
+                        <color key="baseForegroundColor" red="0.74901960784313726" green="0.74901960784313726" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="toSelectCurrecy:" destination="-1" eventType="touchUpInside" id="4Cw-Ox-4OH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0Z-hV-tyG" userLabel="swapСurrencies">
+                    <rect key="frame" x="198" y="143" width="18" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="4co-ZX-f9c"/>
+                        <constraint firstAttribute="width" constant="18" id="Srz-er-FA6"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="replace"/>
+                    <connections>
+                        <action selector="swapСurrencies:" destination="-1" eventType="touchUpInside" id="I7H-zg-ZF8"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R88-8s-lt8" userLabel="fromValue">
+                    <rect key="frame" x="24" y="212" width="159" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="Awt-Fw-Qqm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="22"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                </textField>
+                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fmv-Bg-Sxn" userLabel="toValue">
+                    <rect key="frame" x="231" y="212" width="159" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="ICE-qb-sgt"/>
+                    </constraints>
+                    <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="22"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4JB-sR-9z1" userLabel="leftBorderView" customClass="BorderView" customModule="CurrencyConverter" customModuleProvider="target">
+                    <rect key="frame" x="24" y="246" width="159" height="1"/>
+                    <color key="backgroundColor" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="mC0-4n-4ET"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6o-y3-Ke3" userLabel="rightView" customClass="BorderView" customModule="CurrencyConverter" customModuleProvider="target">
+                    <rect key="frame" x="231" y="246" width="159" height="1"/>
+                    <color key="backgroundColor" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="ac9-iz-drc"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofv-pH-Mas" customClass="RefreshButton" customModule="CurrencyConverter" customModuleProvider="target">
+                    <rect key="frame" x="24" y="796" width="366" height="56"/>
+                    <color key="backgroundColor" red="0.23137254901960785" green="0.4392156862745098" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="cJl-dd-0U6"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Refresh">
+                        <fontDescription key="titleFontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="5bF-Tw-EWi" firstAttribute="leading" secondItem="s0Z-hV-tyG" secondAttribute="trailing" constant="15" id="0vD-lX-wUn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n6o-y3-Ke3" secondAttribute="trailing" constant="24" id="2MX-2V-yNY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ofv-pH-Mas" secondAttribute="trailing" constant="24" id="4J4-B5-X5p"/>
+                <constraint firstItem="jdH-SY-UKY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="5am-Qy-f35"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5bF-Tw-EWi" secondAttribute="trailing" constant="24" id="7Vk-PX-NgO"/>
+                <constraint firstItem="fmv-Bg-Sxn" firstAttribute="centerX" secondItem="5bF-Tw-EWi" secondAttribute="centerX" id="80e-y4-wRf"/>
+                <constraint firstItem="s0Z-hV-tyG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AYT-LH-d2Z"/>
+                <constraint firstItem="jdH-SY-UKY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="DCQ-Ym-Ny1"/>
+                <constraint firstItem="jdH-SY-UKY" firstAttribute="centerY" secondItem="s0Z-hV-tyG" secondAttribute="centerY" id="DyG-fn-12z"/>
+                <constraint firstItem="4JB-sR-9z1" firstAttribute="top" secondItem="R88-8s-lt8" secondAttribute="bottom" constant="2" id="EC3-lt-s2P"/>
+                <constraint firstItem="5bF-Tw-EWi" firstAttribute="centerY" secondItem="s0Z-hV-tyG" secondAttribute="centerY" id="EOj-9S-DM9"/>
+                <constraint firstItem="R88-8s-lt8" firstAttribute="top" secondItem="jdH-SY-UKY" secondAttribute="bottom" constant="32" id="MDC-Ov-kwG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ofv-pH-Mas" secondAttribute="bottom" constant="10" id="RIm-ql-lDm"/>
+                <constraint firstItem="4JB-sR-9z1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="Rkq-EF-PsS"/>
+                <constraint firstItem="s0Z-hV-tyG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="51" id="To0-b1-WwN"/>
+                <constraint firstItem="4JB-sR-9z1" firstAttribute="trailing" secondItem="R88-8s-lt8" secondAttribute="trailing" id="Ttu-Kt-qWg"/>
+                <constraint firstItem="n6o-y3-Ke3" firstAttribute="trailing" secondItem="fmv-Bg-Sxn" secondAttribute="trailing" id="Vsx-9D-Wo7"/>
+                <constraint firstItem="fmv-Bg-Sxn" firstAttribute="top" secondItem="5bF-Tw-EWi" secondAttribute="bottom" constant="32" id="WjX-Us-EqS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fmv-Bg-Sxn" secondAttribute="trailing" constant="24" id="XO0-al-TxD"/>
+                <constraint firstItem="ofv-pH-Mas" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="XWl-cX-ezI"/>
+                <constraint firstItem="n6o-y3-Ke3" firstAttribute="top" secondItem="fmv-Bg-Sxn" secondAttribute="bottom" constant="2" id="bhs-Dc-F94"/>
+                <constraint firstItem="R88-8s-lt8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="byA-sX-vq5"/>
+                <constraint firstItem="s0Z-hV-tyG" firstAttribute="leading" secondItem="jdH-SY-UKY" secondAttribute="trailing" constant="15" id="cIO-h6-R9l"/>
+                <constraint firstItem="R88-8s-lt8" firstAttribute="trailing" secondItem="jdH-SY-UKY" secondAttribute="trailing" id="eyL-zX-hVV"/>
+                <constraint firstItem="4JB-sR-9z1" firstAttribute="leading" secondItem="R88-8s-lt8" secondAttribute="leading" id="fcI-pY-VHO"/>
+                <constraint firstItem="fmv-Bg-Sxn" firstAttribute="trailing" secondItem="5bF-Tw-EWi" secondAttribute="trailing" id="g1i-rb-DP2"/>
+                <constraint firstItem="n6o-y3-Ke3" firstAttribute="centerX" secondItem="fmv-Bg-Sxn" secondAttribute="centerX" id="gnh-MX-2p9"/>
+                <constraint firstItem="R88-8s-lt8" firstAttribute="leading" secondItem="jdH-SY-UKY" secondAttribute="leading" id="heZ-hd-lad"/>
+                <constraint firstItem="5bF-Tw-EWi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="jBb-8F-Hkv"/>
+                <constraint firstItem="ofv-pH-Mas" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="jiw-QX-VAf"/>
+                <constraint firstItem="4JB-sR-9z1" firstAttribute="centerX" secondItem="R88-8s-lt8" secondAttribute="centerX" id="kFu-4F-SWm"/>
+                <constraint firstItem="n6o-y3-Ke3" firstAttribute="leading" secondItem="fmv-Bg-Sxn" secondAttribute="leading" id="kcj-fz-PZ5"/>
+                <constraint firstItem="fmv-Bg-Sxn" firstAttribute="leading" secondItem="5bF-Tw-EWi" secondAttribute="leading" id="nGC-xC-2xl"/>
+                <constraint firstItem="R88-8s-lt8" firstAttribute="centerX" secondItem="jdH-SY-UKY" secondAttribute="centerX" id="w1t-6M-0ma"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="31.884057971014496" y="-11.383928571428571"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="5bF-Tw-EWi">
+            <size key="intrinsicContentSize" width="105" height="34"/>
+        </designable>
+        <designable name="jdH-SY-UKY">
+            <size key="intrinsicContentSize" width="105" height="34"/>
+        </designable>
+        <designable name="ofv-pH-Mas">
+            <size key="intrinsicContentSize" width="82.5" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="arrowDown" width="12" height="8"/>
+        <image name="replace" width="20" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
