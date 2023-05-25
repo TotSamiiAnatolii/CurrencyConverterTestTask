@@ -42,10 +42,12 @@ protocol ConverterCurrencyPresenterProtocol: AnyObject {
     func formatter(_ value: Double, count: Int) -> String
     
     func convertTextInNumerals(input: String?) -> Double
+    
+    func failure(error: Error)
 }
 
 final class ConverterCurrencyPresenter: ConverterCurrencyPresenterProtocol {
-    
+   
     weak var view: ConverterCurrencyController?
     
     var router: RouterProtocol
@@ -85,7 +87,7 @@ final class ConverterCurrencyPresenter: ConverterCurrencyPresenterProtocol {
     
     func selectToCurrency() {
         if fromCurrency.isEmpty {
-            view?.noFromToСurrencySelected(view?.fromCurrencyButton, nil)
+            view?.noFromToСurrencySelected(view?.fromSelectCurrencyButton, nil)
             return
         }
         let model = SelectCurrencyModel(
@@ -104,7 +106,9 @@ final class ConverterCurrencyPresenter: ConverterCurrencyPresenterProtocol {
                 let rate = success.data.values.first ?? ""
                 self.setToСalculatedValue(self.calculate(rate))
             case .failure(let failure):
-                self.view?.failure(error: failure)
+                DispatchQueue.main.async {
+                    self.failure(error: failure)
+                }
             }
         }
     }
@@ -113,10 +117,12 @@ final class ConverterCurrencyPresenter: ConverterCurrencyPresenterProtocol {
         networkService.getListCurrency { result in
             switch result {
             case .success(let success):
-                let y = self.currencyParser.decomposeCurrencyPair(success.data)
-                self.listCurrency = self.currencyParser.parseListOfPairs(y)
+                let data = self.currencyParser.decomposeCurrencyPair(success.data)
+                self.listCurrency = self.currencyParser.parseListOfPairs(data)
             case .failure(let failure):
-                self.view?.failure(error: failure)
+                DispatchQueue.main.async {
+                    self.failure(error: failure)
+                }
             }
         }
     }
@@ -130,8 +136,8 @@ final class ConverterCurrencyPresenter: ConverterCurrencyPresenterProtocol {
         if fromCurrency.isEmpty && toCurrency.isEmpty {
             return
         }
-        view?.fromCurrencyButton.setValue(code: toCurrency)
-        view?.toCurrencyButton.setValue(code: fromCurrency)
+        view?.setFromCurrencyCode(code: toCurrency)
+        view?.setToCurrencyCode(code: fromCurrency)
         let currentCurrency = fromCurrency
         let toValue = view?.toValue.text
         fromCurrency = toCurrency
@@ -145,12 +151,12 @@ final class ConverterCurrencyPresenter: ConverterCurrencyPresenterProtocol {
     
     func setFromCodeCurrency(codeCurrency: String) {
         self.fromCurrency = codeCurrency
-        view?.fromCurrencyButton.setValue(code: fromCurrency)
+        view?.setFromCurrencyCode(code: fromCurrency)
     }
     
     func setToCodeCurrency(codeCurrency: String) {
         self.toCurrency = codeCurrency
-        view?.toCurrencyButton.setValue(code: toCurrency)
+        view?.setToCurrencyCode(code: toCurrency)
     }
     
     func refresh() {
@@ -179,15 +185,15 @@ final class ConverterCurrencyPresenter: ConverterCurrencyPresenterProtocol {
             return true
             
         case _ where fromCurrency.isEmpty && toCurrency.isEmpty:
-            view?.noFromToСurrencySelected(view?.fromCurrencyButton, view?.toCurrencyButton)
+            view?.noFromToСurrencySelected(view?.fromSelectCurrencyButton, view?.toSelectCurrencyButton)
             return false
             
         case _ where !fromCurrency.isEmpty && toCurrency.isEmpty:
-            view?.noFromToСurrencySelected(nil, view?.toCurrencyButton)
+            view?.noFromToСurrencySelected(nil, view?.toSelectCurrencyButton)
             return false
             
         case _ where fromCurrency.isEmpty && !toCurrency.isEmpty:
-            view?.noFromToСurrencySelected(view?.fromCurrencyButton, nil)
+            view?.noFromToСurrencySelected(view?.fromSelectCurrencyButton, nil)
             return false
             
         default:
@@ -213,5 +219,12 @@ final class ConverterCurrencyPresenter: ConverterCurrencyPresenterProtocol {
             return number
         }
         return 0
+    }
+    
+    func failure(error: Error) {
+
+        router.alert(title: "Error", message:  error.localizedDescription, btnTitle: "Повторить") {
+
+        }
     }
 }

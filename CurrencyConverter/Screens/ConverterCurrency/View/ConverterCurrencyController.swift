@@ -13,8 +13,10 @@ protocol ConverterCurrencyViewProtocol {
     func setCalculatedValue(_ value: String)
     
     func noFromToСurrencySelected(_ fromButton: UIButton?, _ toButton: UIButton?)
+  
+    func setFromCurrencyCode(code: String)
     
-    func failure(error: Error)
+    func setToCurrencyCode(code: String)
 }
 
 final class ConverterCurrencyController: UIViewController {
@@ -25,12 +27,16 @@ final class ConverterCurrencyController: UIViewController {
     
     @IBOutlet weak var bottomConstraintRefresh: NSLayoutConstraint!
     
-    @IBOutlet weak var fromCurrencyButton: SelectCurrency!
+    @IBOutlet weak var fromCurrency: UILabel!
     
-    @IBOutlet weak var toCurrencyButton: SelectCurrency!
+    @IBOutlet weak var toCurrency: UILabel!
     
     @IBOutlet weak var leftBorderView: BorderView!
         
+    @IBOutlet weak var toSelectCurrencyButton: SelectCurrency!
+    
+    @IBOutlet weak var fromSelectCurrencyButton: SelectCurrency!
+    
     var presenter: ConverterCurrencyPresenterProtocol
 
     private let header = "Currency converter"
@@ -46,7 +52,7 @@ final class ConverterCurrencyController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = header
+        self.setupNavBar(header: header)
         fromValue.delegate = self
     }
     
@@ -55,7 +61,7 @@ final class ConverterCurrencyController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-
+   
     //MARK: Action keyboard operation
     @objc func keyboardWillChange(notification: Notification) {
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
@@ -129,6 +135,16 @@ extension ConverterCurrencyController: UITextFieldDelegate {
     }
 }
 extension ConverterCurrencyController: ConverterCurrencyViewProtocol {
+    func setFromCurrencyCode(code: String) {
+        fromCurrency.text = code
+        fromCurrency.textColor = .black
+    }
+    
+    func setToCurrencyCode(code: String) {
+        toCurrency.text = code
+        toCurrency.textColor = .black
+    }
+    
    
     func setCalculatedValue(_ value: String) {
         toValue.text = value
@@ -137,11 +153,7 @@ extension ConverterCurrencyController: ConverterCurrencyViewProtocol {
     func setFromValue(_ value: String) {
         fromValue.text = value
     }
-    
-    func failure(error: Error) {
-        
-    }
- 
+   
     func noFromToСurrencySelected(_ fromButton: UIButton?, _ toButton: UIButton?) {
         UIView.animateKeyframes(withDuration: 0.4,
                                 delay: 0,

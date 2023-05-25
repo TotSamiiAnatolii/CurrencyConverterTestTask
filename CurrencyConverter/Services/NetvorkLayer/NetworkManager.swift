@@ -50,6 +50,12 @@ final class NetworkManager: NetworkServiceProtocol {
     private func fetchModels<T: Decodable>(from url: URL, in completion: @escaping ((Result<T, Error>) -> Void)) {
         
         URLSession.shared.dataTask(with: url) { data, _, error in
+            
+            if let error = error {
+                completion(.failure(error))
+                print(error.localizedDescription)
+            }
+            
             guard let data = data else {
                 print(error?.localizedDescription ?? "No description")
                 return
@@ -63,6 +69,7 @@ final class NetworkManager: NetworkServiceProtocol {
                 }
             }
             catch {
+                completion(.failure(error))
                 print("decode error: \(error)")
             }
         }.resume()

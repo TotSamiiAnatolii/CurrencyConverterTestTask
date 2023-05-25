@@ -22,6 +22,9 @@
 		180212DB2A1A4F7F00609F44 /* RefreshButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180212DA2A1A4F7F00609F44 /* RefreshButton.swift */; };
 		180212DC2A1A4F7F00609F44 /* RefreshButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180212DA2A1A4F7F00609F44 /* RefreshButton.swift */; };
 		180212DD2A1A4F7F00609F44 /* RefreshButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180212DA2A1A4F7F00609F44 /* RefreshButton.swift */; };
+		181E42882A1FB2A300B5241D /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181E42872A1FB2A300B5241D /* OpenSans-SemiBold.ttf */; };
+		181E42892A1FB5AD00B5241D /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181E42872A1FB2A300B5241D /* OpenSans-SemiBold.ttf */; };
+		181E428A2A1FB5AD00B5241D /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181E42872A1FB2A300B5241D /* OpenSans-SemiBold.ttf */; };
 		1843EBE32A1A6F5B007E034A /* SelectCurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EBE12A1A6F5B007E034A /* SelectCurrencyCell.swift */; };
 		1843EBE42A1A6F5B007E034A /* SelectCurrencyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1843EBE22A1A6F5B007E034A /* SelectCurrencyCell.xib */; };
 		1843EBE72A1A6FD8007E034A /* ConfigureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EBE62A1A6FD8007E034A /* ConfigureView.swift */; };
@@ -33,6 +36,8 @@
 		18539B7D2A1BF62000B40632 /* CurrencyParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18539B7C2A1BF62000B40632 /* CurrencyParser.swift */; };
 		18539B7F2A1C09FA00B40632 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18539B7E2A1C09FA00B40632 /* Router.swift */; };
 		18539B812A1C13CC00B40632 /* SelectCurrencyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18539B802A1C13CC00B40632 /* SelectCurrencyPresenter.swift */; };
+		185B58EE2A1FBE430023717D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B58ED2A1FBE430023717D /* Fonts.swift */; };
+		185B58F12A1FBF1D0023717D /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B58F02A1FBF1D0023717D /* UIViewController+.swift */; };
 		188294662A1CC2AE008C9C43 /* Formatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188294652A1CC2AE008C9C43 /* Formatter+.swift */; };
 		188294692A1CD450008C9C43 /* CurrencyCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188294682A1CD450008C9C43 /* CurrencyCache.swift */; };
 		1882946C2A1CD9F1008C9C43 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882946B2A1CD9F1008C9C43 /* Date+.swift */; };
@@ -83,7 +88,7 @@
 		180212D12A1A446900609F44 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		180212D42A1A451900609F44 /* SelectCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrency.swift; sourceTree = "<group>"; };
 		180212DA2A1A4F7F00609F44 /* RefreshButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshButton.swift; sourceTree = "<group>"; };
-		180212DF2A1A4FC300609F44 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		181E42872A1FB2A300B5241D /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		1843EBE12A1A6F5B007E034A /* SelectCurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyCell.swift; sourceTree = "<group>"; };
 		1843EBE22A1A6F5B007E034A /* SelectCurrencyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCurrencyCell.xib; sourceTree = "<group>"; };
 		1843EBE62A1A6FD8007E034A /* ConfigureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureView.swift; sourceTree = "<group>"; };
@@ -95,6 +100,8 @@
 		18539B7C2A1BF62000B40632 /* CurrencyParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyParser.swift; sourceTree = "<group>"; };
 		18539B7E2A1C09FA00B40632 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		18539B802A1C13CC00B40632 /* SelectCurrencyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyPresenter.swift; sourceTree = "<group>"; };
+		185B58ED2A1FBE430023717D /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		185B58F02A1FBF1D0023717D /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		188294652A1CC2AE008C9C43 /* Formatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+.swift"; sourceTree = "<group>"; };
 		188294682A1CD450008C9C43 /* CurrencyCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCache.swift; sourceTree = "<group>"; };
 		1882946B2A1CD9F1008C9C43 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
@@ -303,7 +310,8 @@
 		180212DE2A1A4FBD00609F44 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				180212DF2A1A4FC300609F44 /* OpenSans-Regular.ttf */,
+				181E42872A1FB2A300B5241D /* OpenSans-SemiBold.ttf */,
+				185B58ED2A1FBE430023717D /* Fonts.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -361,9 +369,18 @@
 			path = CurencyParser;
 			sourceTree = "<group>";
 		};
+		185B58EF2A1FBF070023717D /* UIViewController+ */ = {
+			isa = PBXGroup;
+			children = (
+				185B58F02A1FBF1D0023717D /* UIViewController+.swift */,
+			);
+			path = "UIViewController+";
+			sourceTree = "<group>";
+		};
 		188294632A1CC28B008C9C43 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				185B58EF2A1FBF070023717D /* UIViewController+ */,
 				1882946A2A1CD9E5008C9C43 /* Date+ */,
 				188294642A1CC294008C9C43 /* Formatter+ */,
 			);
@@ -519,6 +536,7 @@
 				180212C32A1A434000609F44 /* ConverterCurrencyController.xib in Resources */,
 				1843EBE42A1A6F5B007E034A /* SelectCurrencyCell.xib in Resources */,
 				1802129A2A1A424200609F44 /* LaunchScreen.storyboard in Resources */,
+				181E42882A1FB2A300B5241D /* OpenSans-SemiBold.ttf in Resources */,
 				180212972A1A424200609F44 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +545,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181E42892A1FB5AD00B5241D /* OpenSans-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +553,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181E428A2A1FB5AD00B5241D /* OpenSans-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +580,8 @@
 				1843EBF42A1AAE38007E034A /* BorderView.swift in Sources */,
 				1843EBE92A1A70DF007E034A /* ModelSelectCurrencyCell.swift in Sources */,
 				180212C22A1A434000609F44 /* ConverterCurrencyController.swift in Sources */,
+				185B58EE2A1FBE430023717D /* Fonts.swift in Sources */,
+				185B58F12A1FBF1D0023717D /* UIViewController+.swift in Sources */,
 				188E66602A1B91260070A6DB /* ModelListCurrency.swift in Sources */,
 				1802128E2A1A423F00609F44 /* AppDelegate.swift in Sources */,
 				180212D52A1A451900609F44 /* SelectCurrency.swift in Sources */,

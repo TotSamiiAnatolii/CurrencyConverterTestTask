@@ -32,7 +32,7 @@ final class SelectCurrencyController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = header
+        self.setupNavBar(header: header)
         prepareTableView()
     }
     
