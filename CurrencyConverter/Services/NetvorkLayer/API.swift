@@ -5,7 +5,7 @@
 //  Created by APPLE on 22.05.2023.
 //
 
-import Foundation
+import UIKit
 
 enum ApiUrl: String {
     case key = "&key=1f8704cf780eeaf40e68ba31dadb2b5a"

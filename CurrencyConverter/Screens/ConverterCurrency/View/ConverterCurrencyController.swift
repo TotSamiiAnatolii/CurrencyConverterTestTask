@@ -93,7 +93,6 @@ final class ConverterCurrencyController: UIViewController {
     @IBAction func toSelectCurrecy(_ sender: SelectCurrency) {
         presenter.selectToCurrency()
     }
-
 }
 extension ConverterCurrencyController: UITextFieldDelegate {
     
@@ -135,6 +134,7 @@ extension ConverterCurrencyController: UITextFieldDelegate {
     }
 }
 extension ConverterCurrencyController: ConverterCurrencyViewProtocol {
+    
     func setFromCurrencyCode(code: String) {
         fromCurrency.text = code
         fromCurrency.textColor = .black
