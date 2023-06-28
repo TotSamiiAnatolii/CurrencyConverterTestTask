@@ -31,11 +31,11 @@ final class NetworkManager: NetworkServiceProtocol {
             print("Error")
             return
         }
-       
         fetchModels(from: url, in: completion)
     }
     
     func getListCurrency(completion: @escaping ((Result<ModelListCurrency, Error>) -> Void)) {
+       
         guard let url = ApiUrl.listCurreny else {
             print("Error")
             return
