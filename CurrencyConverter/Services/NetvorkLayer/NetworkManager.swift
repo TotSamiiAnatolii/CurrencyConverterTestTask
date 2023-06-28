@@ -26,28 +26,17 @@ final class NetworkManager: NetworkServiceProtocol {
             completion(.success(value))
             return
         }
-      
-        
-    
-        let urlString = "\(ApiUrl.rate.rawValue)\(from)\(to)\(ApiUrl.key.rawValue)"
-        
-        let url = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-        guard let url = URL(string: url) else {
+
+        guard let url = ApiUrl.rateCurrency(from: from, to: to) else {
             print("Error")
             return
         }
+       
         fetchModels(from: url, in: completion)
     }
     
     func getListCurrency(completion: @escaping ((Result<ModelListCurrency, Error>) -> Void)) {
-        let urlString = ApiUrl.listCurrency.rawValue + ApiUrl.key.rawValue
-        var components = URLComponents(string: "https://currate.ru/api/")!
-        components.query = "get=currency_list"
-        components.percentEncodedQuery = ApiUrl.key.rawValue
-        
-        
-        let url = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-        guard let url = URL(string: url) else {
+        guard let url = ApiUrl.listCurreny else {
             print("Error")
             return
         }
