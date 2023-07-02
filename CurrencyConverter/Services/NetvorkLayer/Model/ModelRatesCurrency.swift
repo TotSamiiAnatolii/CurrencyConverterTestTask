@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct RatesModel: Decodable {
     let status: Int
     let message: String

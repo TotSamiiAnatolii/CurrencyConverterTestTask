@@ -26,7 +26,7 @@ final class NetworkManager: NetworkServiceProtocol {
             completion(.success(value))
             return
         }
-
+        
         guard let url = ApiUrl.rateCurrency(from: from, to: to) else {
             print("Error")
             return
@@ -35,7 +35,7 @@ final class NetworkManager: NetworkServiceProtocol {
     }
     
     func getListCurrency(completion: @escaping ((Result<ModelListCurrency, Error>) -> Void)) {
-       
+        
         guard let url = ApiUrl.listCurreny else {
             print("Error")
             return
