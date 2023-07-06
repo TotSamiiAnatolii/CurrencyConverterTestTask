@@ -9,9 +9,7 @@ import UIKit
 
 enum ApiUrl: String {
     case key = "&key=1f8704cf780eeaf40e68ba31dadb2b5a"
-    case listCurrency = "https://currate.ru/api/?get=currency_list"
-    case rate = "https://currate.ru/api/?get=rates&pairs="
-    
+
     static var listCurreny: URL? {
         var components = URLComponents()
         components.scheme = "https"

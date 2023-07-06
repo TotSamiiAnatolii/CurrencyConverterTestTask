@@ -26,8 +26,8 @@ final class CurrencyParser {
             return nil
         }
         return (
-            String(input[input.startIndex..<(input.index(input.startIndex, offsetBy: currencyCodeCount))]),
-            String(input[(input.index(input.endIndex, offsetBy: -currencyCodeCount))..<input.endIndex])
+            String(input.prefix(currencyCodeCount)),
+            String(input.suffix(currencyCodeCount))
         )
     }
     

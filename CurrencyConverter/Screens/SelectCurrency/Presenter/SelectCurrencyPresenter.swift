@@ -34,8 +34,8 @@ final class SelectCurrencyPresenter: SelectCurrencyPresenterProtocol {
     }
     
     func setCurrency(currency: String) {
-        self.model.onAction(currency)
-        self.model.isCurrency = currency
+        model.onAction(currency)
+        model.isCurrency = currency
     }
     
     func map(model: [String]) -> [ModelSelectCurrencyCell] {
@@ -43,5 +43,16 @@ final class SelectCurrencyPresenter: SelectCurrencyPresenterProtocol {
             ModelSelectCurrencyCell(
                 codeCurrency: currency)
         }
+    }
+    
+    func sсrollTable() {
+        
+    }
+    
+    func findIndexSelectedElement(_ model: SelectCurrencyModel) -> Int? {
+        guard let index = model.listCurrency.firstIndex(of: model.isCurrency) else {
+            return nil
+        }
+        return index
     }
 }
