@@ -17,6 +17,8 @@ protocol SelectCurrencyPresenterProtocol {
     
     func setCurrency(currency: String)
     
+    func sсrollTable()
+    
     func map(model: [String]) -> [ModelSelectCurrencyCell]
 }
 
@@ -46,7 +48,8 @@ final class SelectCurrencyPresenter: SelectCurrencyPresenterProtocol {
     }
     
     func sсrollTable() {
-        
+        guard let row = findIndexSelectedElement(model) else { return }
+        view?.sсrollTable(indexPath: IndexPath(row: row, section: .zero))
     }
     
     func findIndexSelectedElement(_ model: SelectCurrencyModel) -> Int? {

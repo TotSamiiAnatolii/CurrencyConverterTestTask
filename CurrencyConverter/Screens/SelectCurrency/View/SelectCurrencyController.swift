@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SelectCurrencyViewProtocol: AnyObject {
-    
+    func sсrollTable(indexPath: IndexPath)
 }
 
 final class SelectCurrencyController: UIViewController {
@@ -34,6 +34,11 @@ final class SelectCurrencyController: UIViewController {
         super.viewDidLoad()
         self.setupNavBar(header: header)
         prepareTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.sсrollTable()
     }
     
     private func prepareTableView() {
@@ -73,5 +78,7 @@ extension SelectCurrencyController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 extension SelectCurrencyController: SelectCurrencyViewProtocol {
-    
+    func sсrollTable(indexPath: IndexPath) {
+        tableView.scrollToRow(at: indexPath, at: .middle, animated: false)
+    }
 }
