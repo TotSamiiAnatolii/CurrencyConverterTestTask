@@ -202,6 +202,9 @@ final class ConverterCurrencyPresenter: ConverterCurrencyPresenterProtocol {
     }
     
     func formatter(_ value: Double, count: Int) -> String {
+        if value == 0 {
+            return ""
+        }
         let formatter = NumberFormatter()
         formatter.roundingMode = .up
         formatter.locale = Locale.current
@@ -222,7 +225,7 @@ final class ConverterCurrencyPresenter: ConverterCurrencyPresenterProtocol {
     }
     
     func failure(error: Error) {
-
+        
         router.alert(title: "Error", message:  error.localizedDescription, btnTitle: "Повторить") {
         }
     }

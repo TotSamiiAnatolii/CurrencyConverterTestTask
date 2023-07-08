@@ -89,7 +89,6 @@ final class ConverterCurrencyController: UIViewController {
         presenter.selectFromCurrency()
     }
     
-    
     @IBAction func toSelectCurrecy(_ sender: SelectCurrency) {
         presenter.selectToCurrency()
     }
@@ -155,8 +154,8 @@ extension ConverterCurrencyController: ConverterCurrencyViewProtocol {
     }
    
     func noFromToСurrencySelected(_ fromButton: UIButton?, _ toButton: UIButton?) {
-        UIView.animateKeyframes(withDuration: 0.4,
-                                delay: 0,
+        UIView.animateKeyframes(withDuration: AppDesign.withDuration,
+                                delay: .zero,
                                 options: [.beginFromCurrentState,
                                           .allowUserInteraction],
                                 animations: {
