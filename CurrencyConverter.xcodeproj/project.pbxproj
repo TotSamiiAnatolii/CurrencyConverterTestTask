@@ -22,9 +22,6 @@
 		180212DB2A1A4F7F00609F44 /* RefreshButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180212DA2A1A4F7F00609F44 /* RefreshButton.swift */; };
 		180212DC2A1A4F7F00609F44 /* RefreshButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180212DA2A1A4F7F00609F44 /* RefreshButton.swift */; };
 		180212DD2A1A4F7F00609F44 /* RefreshButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180212DA2A1A4F7F00609F44 /* RefreshButton.swift */; };
-		181E42882A1FB2A300B5241D /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181E42872A1FB2A300B5241D /* OpenSans-SemiBold.ttf */; };
-		181E42892A1FB5AD00B5241D /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181E42872A1FB2A300B5241D /* OpenSans-SemiBold.ttf */; };
-		181E428A2A1FB5AD00B5241D /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181E42872A1FB2A300B5241D /* OpenSans-SemiBold.ttf */; };
 		1843EBE32A1A6F5B007E034A /* SelectCurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EBE12A1A6F5B007E034A /* SelectCurrencyCell.swift */; };
 		1843EBE42A1A6F5B007E034A /* SelectCurrencyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1843EBE22A1A6F5B007E034A /* SelectCurrencyCell.xib */; };
 		1843EBE72A1A6FD8007E034A /* ConfigureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843EBE62A1A6FD8007E034A /* ConfigureView.swift */; };
@@ -42,6 +39,9 @@
 		188294692A1CD450008C9C43 /* CurrencyCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188294682A1CD450008C9C43 /* CurrencyCache.swift */; };
 		1882946C2A1CD9F1008C9C43 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882946B2A1CD9F1008C9C43 /* Date+.swift */; };
 		1882946E2A1CF93B008C9C43 /* SelectCurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882946D2A1CF93B008C9C43 /* SelectCurrencyModel.swift */; };
+		1882F9672A5F273500085C0E /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1882F9662A5F273500085C0E /* OpenSans-SemiBold.ttf */; };
+		1882F9682A5F273500085C0E /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1882F9662A5F273500085C0E /* OpenSans-SemiBold.ttf */; };
+		1882F9692A5F273500085C0E /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1882F9662A5F273500085C0E /* OpenSans-SemiBold.ttf */; };
 		188BFBB22A594D8B00CD5A5F /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BFBB12A594D8B00CD5A5F /* AppDesign.swift */; };
 		188E665B2A1B70830070A6DB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E665A2A1B70830070A6DB /* API.swift */; };
 		188E665C2A1B70830070A6DB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E665A2A1B70830070A6DB /* API.swift */; };
@@ -89,7 +89,6 @@
 		180212D12A1A446900609F44 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		180212D42A1A451900609F44 /* SelectCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrency.swift; sourceTree = "<group>"; };
 		180212DA2A1A4F7F00609F44 /* RefreshButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshButton.swift; sourceTree = "<group>"; };
-		181E42872A1FB2A300B5241D /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		1843EBE12A1A6F5B007E034A /* SelectCurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyCell.swift; sourceTree = "<group>"; };
 		1843EBE22A1A6F5B007E034A /* SelectCurrencyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCurrencyCell.xib; sourceTree = "<group>"; };
 		1843EBE62A1A6FD8007E034A /* ConfigureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureView.swift; sourceTree = "<group>"; };
@@ -107,6 +106,7 @@
 		188294682A1CD450008C9C43 /* CurrencyCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCache.swift; sourceTree = "<group>"; };
 		1882946B2A1CD9F1008C9C43 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		1882946D2A1CF93B008C9C43 /* SelectCurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyModel.swift; sourceTree = "<group>"; };
+		1882F9662A5F273500085C0E /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiBold.ttf"; path = "../../../../На YOUTUBE/TestTaskCurrencyConverter/TestTaskCurrencyConverter/Library/Fonts/OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		188BFBB12A594D8B00CD5A5F /* AppDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDesign.swift; sourceTree = "<group>"; };
 		188E665A2A1B70830070A6DB /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		188E665F2A1B91260070A6DB /* ModelListCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelListCurrency.swift; sourceTree = "<group>"; };
@@ -313,7 +313,7 @@
 		180212DE2A1A4FBD00609F44 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				181E42872A1FB2A300B5241D /* OpenSans-SemiBold.ttf */,
+				1882F9662A5F273500085C0E /* OpenSans-SemiBold.ttf */,
 				185B58ED2A1FBE430023717D /* Fonts.swift */,
 			);
 			path = Fonts;
@@ -537,9 +537,9 @@
 			files = (
 				180212CE2A1A43B100609F44 /* SelectCurrencyController.xib in Resources */,
 				180212C32A1A434000609F44 /* ConverterCurrencyController.xib in Resources */,
+				1882F9672A5F273500085C0E /* OpenSans-SemiBold.ttf in Resources */,
 				1843EBE42A1A6F5B007E034A /* SelectCurrencyCell.xib in Resources */,
 				1802129A2A1A424200609F44 /* LaunchScreen.storyboard in Resources */,
-				181E42882A1FB2A300B5241D /* OpenSans-SemiBold.ttf in Resources */,
 				180212972A1A424200609F44 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,7 +548,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181E42892A1FB5AD00B5241D /* OpenSans-SemiBold.ttf in Resources */,
+				1882F9682A5F273500085C0E /* OpenSans-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +556,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181E428A2A1FB5AD00B5241D /* OpenSans-SemiBold.ttf in Resources */,
+				1882F9692A5F273500085C0E /* OpenSans-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

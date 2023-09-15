@@ -225,7 +225,6 @@ final class ConverterCurrencyPresenter: ConverterCurrencyPresenterProtocol {
     }
     
     func failure(error: Error) {
-        
         router.alert(title: "Error", message:  error.localizedDescription, btnTitle: "Повторить") {
         }
     }

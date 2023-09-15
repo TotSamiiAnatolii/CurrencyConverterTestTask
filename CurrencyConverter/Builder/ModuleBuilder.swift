@@ -8,8 +8,11 @@
 import UIKit
 
 protocol AssemblyBuilderProtocol {
+    
     func createConverterCurrency(router: RouterProtocol) -> UIViewController
+    
     func createSelectedCurrency(router: RouterProtocol, model: SelectCurrencyModel) -> UIViewController
+    
     func createAlert(title: String, message: String, btnTitle: String, action: @escaping (() -> Void)) -> UIAlertController
 }
 
